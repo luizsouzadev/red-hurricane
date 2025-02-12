@@ -1,0 +1,7 @@
+<h1>Consulta de Previsão do Tempo</h1>
+
+<%= form_with url: tempo_path, method: :get, local: true do |form| %>
+  <label for="cidade">Digite o nome da cidade:</label>
+  <%= form.text_field :cidade, placeholder: "Ex: Natal", required: true %>
+  <%= form.submit "Buscar" %>
+<% end %>

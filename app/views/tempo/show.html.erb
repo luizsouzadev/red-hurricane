@@ -1,0 +1,16 @@
+<h1>Previsão do Tempo para <%= @tempo[:cidade] %>, <%= @tempo[:pais] %></h1>
+
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">Condições atuais</h5>
+    <p class="card-text"><strong>Temperatura:</strong> <%= @tempo[:temperatura] %>°C</p>
+    <p class="card-text"><strong>Sensação Térmica:</strong> <%= @tempo[:sensacao_termica] %>°C</p>
+    <p class="card-text"><strong>Descrição:</strong> <%= @tempo[:descricao] %></p>
+    <p class="card-text"><strong>Vento:</strong> <%= @tempo[:vento] %> m/s</p>
+    <p class="card-text"><strong>Umidade:</strong> <%= @tempo[:umidade] %>%</p>
+    <p class="card-text"><strong>Horário Local:</strong> <%= @tempo[:horario_local] %></p>
+    <img src="<%= @tempo[:bandeira_url] %>" alt="Bandeira de <%= @tempo[:pais] %>">
+  </div>
+</div>
+
+<%= link_to 'Nova Consulta', tempo_path, class: 'btn btn-primary mt-3' %>
