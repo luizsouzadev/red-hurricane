@@ -9,3 +9,71 @@ body {
   font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
 
 }
+
+.bg-hurricane {
+  background-color: #07090f;
+}
+
+.hurricane-card {
+  background-color: #121821;
+  border: 1px solid #d1d5db;
+  border-radius: 30px;
+}
+
+.hurricane-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: white;
+}
+
+.hurricane-input.form-control {
+  background-color: #374151;
+  color: white;
+  border-radius: 25px;
+  padding-left: 15px;
+}
+
+.hurricane-input.form-control::placeholder {
+  color: white;
+}
+
+.hurricane-btn {
+  background-color: #bf0000;
+  color: white;
+  border-radius: 25px;
+  padding: 0 20px;
+}
+
+.hurricane-city {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.hurricane-desc {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+}
+
+.hurricane-temp {
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+}
+
+.hurricane-icon {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.hurricane-label {
+  font-size: 1rem;
+  color: white;
+}
+
+.hurricane-value {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+}

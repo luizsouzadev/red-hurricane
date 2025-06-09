@@ -1,28 +1,19 @@
-<div class="d-flex justify-content-center align-items-center vh-100" style="background-color: #07090f;">
+<div class="d-flex justify-content-center align-items-center vh-100 bg-hurricane">
   <div class="container-sm py-5" style="max-width: 600px;">
-    <div class="card shadow rounded p-4" style="background-color: #121821; border: 1px solid #d1d5db; border-radius: 30px;">
+    <div class="card shadow rounded p-4 hurricane-card">
       <div class="d-flex justify-content-center align-items-center mb-4">
         <%= image_tag "main-logo.png", alt: "Red Hurricane Logo", class: "img-fluid me-2", style: "max-width: 50px;" %>
-        <h1 class="mb-0" style="font-size: 1.8rem; font-weight: bold; color: white;">Red Hurricane</h1>
+        <h1 class="mb-0 hurricane-title">Red Hurricane</h1>
       </div>
 
       <%= form_with url: tempo_path, method: :get, local: true, class: "d-flex align-items-center gap-3" do |form| %>
         <div class="flex-grow-1">
-          <%= form.text_field :cidade, placeholder: "Cidade", required: true, class: "form-control", style: "border-radius: 25px; padding-left: 15px;" %>
+          <%= form.text_field :cidade, placeholder: "Cidade", required: true, class: "form-control hurricane-input" %>
         </div>
-        <%= form.button type: "submit", class: "btn", style: "background-color: #bf0000; color: white; border-radius: 25px; padding: 0 20px;" do %>
+        <%= form.button type: "submit", class: "btn hurricane-btn" do %>
           <i class="bi bi-search"></i>
         <% end %>
       <% end %>
-      <style>
-        input.form-control {
-          background-color: #374151;
-          color: white;
-        }
-          input.form-control::placeholder {
-          color: white;
-        }
-      </style>
     </div>
   </div>
 </div>
