@@ -1,16 +1,46 @@
-<h1>Previsão do Tempo para <%= @tempo[:cidade] %>, <%= @tempo[:pais] %></h1>
+<div class="d-flex justify-content-center align-items-center vh-100" style="background-color: #07090f;">
+  <div class="container-sm py-5" style="max-width: 600px;">
+    <div class="card shadow rounded p-4" style="background-color: #121821; border: 1px solid #d1d5db; border-radius: 30px;">
+      <div class="d-flex justify-content-center align-items-center mb-4">
+        <%= image_tag "main-logo.png", alt: "Red Hurricane Logo", class: "img-fluid me-2", style: "max-width: 50px;" %>
+        <h1 class="mb-0" style="font-size: 1.8rem; font-weight: bold; color: white;">Red Hurricane</h1>
+      </div>
 
-<div class="card">
-  <div class="card-body">
-    <h5 class="card-title">Condições atuais</h5>
-    <p class="card-text"><strong>Temperatura:</strong> <%= @tempo[:temperatura] %>°C</p>
-    <p class="card-text"><strong>Sensação Térmica:</strong> <%= @tempo[:sensacao_termica] %>°C</p>
-    <p class="card-text"><strong>Descrição:</strong> <%= @tempo[:descricao] %></p>
-    <p class="card-text"><strong>Vento:</strong> <%= @tempo[:vento] %> m/s</p>
-    <p class="card-text"><strong>Umidade:</strong> <%= @tempo[:umidade] %>%</p>
-    <p class="card-text"><strong>Horário Local:</strong> <%= @tempo[:horario_local] %></p>
-    <img src="<%= @tempo[:bandeira_url] %>" alt="Bandeira de <%= @tempo[:pais] %>">
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <div class="d-flex align-items-center">
+          <h2 class="mb-0 me-2" style="font-size: 1.5rem; font-weight: bold; color: white;"><%= @tempo[:cidade] %></h2>
+          <img src="<%= @tempo[:bandeira_url] %>" alt="Bandeira de <%= @tempo[:pais] %>" class="img-fluid" style="max-width: 30px;">
+        </div>
+        <div class="d-flex align-items-center">
+          <img src="<%= @tempo[:icone_url] %>" alt="Ícone do clima" class="img-fluid me-2" style="max-width: 50px;">
+          <span style="font-size: 1.2rem; font-weight: bold; color: white;"><%= @tempo[:descricao] %></span>
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="text-center">
+          <h1 style="font-size: 3rem; font-weight: bold; color: white;"><%= @tempo[:temperatura] %>°C</h1>
+        </div>
+        <div class="text-center">
+          <i class="bi bi-thermometer-half" style="font-size: 1.5rem; color: white;"></i>
+          <p class="mb-0" style="font-size: 1rem; color: white;">Sensação</p>
+          <p style="font-size: 1.2rem; font-weight: bold; color: white;"><%= @tempo[:sensacao_termica] %>°C</p>
+        </div>
+        <div class="text-center">
+          <i class="bi bi-droplet" style="font-size: 1.5rem; color: white;"></i>
+          <p class="mb-0" style="font-size: 1rem; color: white;">Umidade</p>
+          <p style="font-size: 1.2rem; font-weight: bold; color: white;"><%= @tempo[:umidade] %>%</p>
+        </div>
+        <div class="text-center">
+          <i class="bi bi-wind" style="font-size: 1.5rem; color: white;"></i>
+          <p class="mb-0" style="font-size: 1rem; color: white;">Vento</p>
+          <p style="font-size: 1.2rem; font-weight: bold; color: white;"><%= @tempo[:vento] %> m/s</p>
+        </div>
+      </div>
+
+      <div class="text-center mt-4">
+        <%= link_to 'Nova Consulta', tempo_path, class: 'btn', style: "background-color: #bf0000; color: white; border-radius: 25px; padding: 0 20px;" %>
+      </div>
+    </div>
   </div>
 </div>
-
-<%= link_to 'Nova Consulta', tempo_path, class: 'btn btn-primary mt-3' %>

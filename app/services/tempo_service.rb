@@ -22,7 +22,8 @@ class TempoService
       vento: data["wind"]["speed"],
       umidade: data["main"]["humidity"],
       sensacao_termica: data["main"]["feels_like"].ceil,
-      bandeira_url: "https://flagsapi.com/#{data["sys"]["country"]}/flat/64.png"
+      bandeira_url: "https://flagsapi.com/#{data["sys"]["country"]}/flat/64.png",
+      icone_url: "https://openweathermap.org/img/wn/#{data["weather"][0]["icon"]}@2x.png"
     }
   end
 end
