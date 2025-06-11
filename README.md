@@ -1,5 +1,10 @@
 # Red Hurricane
 
+<p align="center" style="display: flex; align-items: center; justify-content: center; gap: 12px;">
+  <img src="app/assets/images/main-logo.png" alt="Red Hurricane Logo" width="50" style="vertical-align: middle;" />
+  <span style="font-size: 2rem; font-weight: bold; vertical-align: middle;">Red Hurricane</span>
+</p>
+
 Red Hurricane é uma aplicação Ruby on Rails que permite consultar a previsão do tempo para qualquer cidade, utilizando a API do OpenWeatherMap.
 
 ## Funcionalidades
